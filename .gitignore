@@ -1,0 +1,83 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pip / build
+pip-wheel-metadata/
+build/
+dist/
+*.egg-info/
+.eggs/
+.wheels/
+
+# =========================
+# Jupyter / IPython
+# =========================
+.ipynb_checkpoints/
+.profile_default/
+.ipython/
+
+# =========================
+# OS / editor
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# =========================
+# Logs / temp
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Data & generated artifacts
+# (keep raw PDFs if you want, but don't commit derived outputs)
+# =========================
+data/processed/
+outputs/
+reports/_build/
+runs/
+
+# If you want to avoid committing large raw docs too, uncomment:
+# data/raw/
+
+# =========================
+# Vector DBs (Chroma / FAISS / etc.)
+# =========================
+db_chroma/
+chroma_db/
+*.faiss
+*.index
+
+# =========================
+# Model caches (Transformers / SentenceTransformers)
+# =========================
+.cache/
+**/.cache/
+**/models/
+**/hf_cache/
+**/huggingface/
+**/torch_cache/
+
+# =========================
+# Streamlit / Gradio
+# =========================
+.streamlit/secrets.toml
+.streamlit/config.toml
+gradio_cached_examples/
