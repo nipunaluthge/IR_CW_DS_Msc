@@ -22,7 +22,7 @@ def main():
         res = col_a.query(
             query_texts=[s["text"]],
             n_results=TOP_K,
-            where={"goal_no": goal_no},   # key improvement
+            where={"goal_no": goal_no},  
             include=["documents", "metadatas", "distances"]
         )
 
@@ -32,11 +32,12 @@ def main():
                 "strategy_goal_no": goal_no,
                 "rank": rank,
                 "action_id": meta.get("action_id", ""),
+                "action_goal_no": meta.get("goal_no"),
                 "csp_ref": meta.get("csp_ref"),
                 "service": meta.get("service"),
                 "distance": float(dist),
                 "similarity": float(dist_to_sim(dist)),
-                "action_text": doc[:500],
+                "action_text": doc[:600],
             })
 
     df = pd.DataFrame(rows)

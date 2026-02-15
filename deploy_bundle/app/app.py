@@ -7,7 +7,7 @@ st.set_page_config(page_title="Strategic–Action Sync Dashboard", layout="wide"
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs"
-DATA = ROOT / "data" / "processed"
+DATA = ROOT / "data_processed"
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
